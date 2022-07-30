@@ -10,7 +10,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon_gorilla.png">
     <!-- Page Title  -->
-    <title>Client Single View | BGA Data Template</title>
+    <title>Client Settings | BGA Data Template</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="./assets/css/dashlite.css?ver=3.0.3">
     <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=3.0.3">
@@ -158,9 +158,9 @@
                                             <div class="nk-block-head nk-block-head-lg">
                                                 <div class="nk-block-between">
                                                     <div class="nk-block-head-content">
-                                                        <h4 class="nk-block-title">Account Information</h4>
+                                                        <h4 class="nk-block-title">Security Settings</h4>
                                                         <div class="nk-block-des">
-                                                            <p>Basic info about user and organization</p>
+                                                            <p>Control security settings for clients</p>
                                                         </div>
                                                     </div>
                                                     <div class="nk-block-head-content align-self-start d-lg-none">
@@ -169,61 +169,49 @@
                                                 </div>
                                             </div><!-- .nk-block-head -->
                                             <div class="nk-block">
-                                                <div class="nk-data data-list">
-                                                    <div class="data-head">
-                                                        <h6 class="overline-title">Profile</h6>
-                                                    </div>
-                                                    <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
-                                                        <div class="data-col">
-                                                            <span class="data-label">Full Name</span>
-                                                            <span class="data-value">Abu Bin Ishtiyak</span>
-                                                        </div>
-                                                        <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
-                                                    </div><!-- data-item -->
-                                                    <div class="data-item">
-                                                        <div class="data-col">
-                                                            <span class="data-label">Email</span>
-                                                            <span class="data-value">info@softnio.com</span>
-                                                        </div>
-                                                        <div class="data-col data-col-end"><span class="data-more disable"><em class="icon ni ni-lock-alt"></em></span></div>
-                                                    </div><!-- data-item -->
-                                                    <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
-                                                        <div class="data-col">
-                                                            <span class="data-label">Phone Number</span>
-                                                            <span class="data-value text-soft">Not add yet</span>
-                                                        </div>
-                                                        <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
-                                                    </div><!-- data-item -->
-                                                   
-                                                   
-                                                </div><!-- data-list -->
-                                                <div class="nk-data data-list">
-                                                    <div class="data-head">
-                                                        <h6 class="overline-title">Organization Details</h6>
-                                                    </div>
-                                                    <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
-                                                        <div class="data-col">
-                                                            <span class="data-label">Name</span>
-                                                            <span class="data-value">IRUSA</span>
-                                                        </div>
-                                                        <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
-                                                    </div><!-- data-item -->
-                                                    <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
-                                                        <div class="data-col">
-                                                            <span class="data-label">Website</span>
-                                                            <span class="data-value">https://irusa.org</span>
-                                                        </div>
-                                                        <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
-                                                    </div><!-- data-item -->
-                                                   
-                                                </div><!-- data-list -->
-                                              
-                                              
-                                                    
-                                                   
-                                               
+                                                <div class="card card-bordered">
+                                                    <div class="card-inner-group">
+                                                        <div class="card-inner">
+                                                            <div class="between-center flex-wrap flex-md-nowrap g-3">
+                                                                <div class="nk-block-text">
+                                                                    <h6>2 Factor Auth</h6>
+                                                                    <p>Toggle two factor authentication for client</p>
+                                                                </div>
+                                                                <div class="nk-block-actions">
+                                                                    <ul class="align-center gx-3">
+                                                                        <li class="order-md-last">
+                                                                            <div class="custom-control custom-switch me-n2">
+                                                                                <input type="checkbox" class="custom-control-input" checked="" id="activity-log">
+                                                                                <label class="custom-control-label" for="activity-log"></label>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .card-inner -->
+                                                        <div class="card-inner">
+                                                            <div class="between-center flex-wrap g-3">
+                                                                <div class="nk-block-text">
+                                                                    <h6>Change Password</h6>
+                                                                    <p>Set a unique password to protect your account.</p>
+                                                                </div>
+                                                                <div class="nk-block-actions flex-shrink-sm-0">
+                                                                    <ul class="align-center flex-wrap flex-sm-nowrap gx-3 gy-2">
+                                                                        <li class="order-md-last">
+                                                                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#profile-edit">Change Password</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <em class="text-soft text-date fs-12px">Last changed: <span>Oct 2, 2019</span></em>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .card-inner -->
+                                                     
+                                                    </div><!-- .card-inner-group -->
+                                                </div><!-- .card -->
                                             </div><!-- .nk-block -->
-                                        </div>
+                                        </div><!-- .card-inner -->
                                         <div class="card-aside card-aside-left user-aside toggle-slide toggle-slide-left toggle-break-lg" data-toggle-body="true" data-content="userAside" data-toggle-screen="lg" data-toggle-overlay="true">
                                             <div class="card-inner-group" data-simplebar>
                                                 <div class="card-inner">
@@ -233,7 +221,7 @@
                                                         </div>
                                                         <div class="user-info">
                                                             <span class="lead-text">Abu Bin Ishtiyak</span>
-                                                            <span class="sub-text">info@irusa.org</span>
+                                                            <span class="sub-text">info@softnio.com</span>
                                                         </div>
                                                        
                                                     </div><!-- .user-card -->
@@ -241,16 +229,16 @@
                                                
                                                 <div class="card-inner p-0">
                                                     <ul class="link-list-menu">
-                                                        <li><a class="active" href="html/user-profile-regular.html"><em class="icon ni ni-user-fill-c"></em><span>Account Infomation</span></a></li>
-                            
-                                                        <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em><span>Databox </span></a></li>
-
-                                                        <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em></em><span>Datastudio</span></a></li>
-
-                                                        <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em><span>Portermetrics</span></a></li>
-
-                                                        <li><a href="html/user-profile-setting.html"><em class="icon ni ni-lock-alt-fill"></em><span>Security Settings</span></a></li>
-                                                       
+                                                        <ul class="link-list-menu">
+                                                            <li><a  href="html/user-profile-regular.html"><em class="icon ni ni-user-fill-c"></em><span>Account Infomation</span></a></li>
+                                
+                                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em><span>Databox </span></a></li>
+    
+                                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em></em><span>Datastudio</span></a></li>
+    
+                                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em><span>Portermetrics</span></a></li>
+    
+                                                            <li><a class="active" href="html/user-profile-setting.html"><em class="icon ni ni-lock-alt-fill"></em><span>Security Settings</span></a></li>
                                                     </ul>
                                                 </div><!-- .card-inner -->
                                             </div><!-- .card-inner-group -->
@@ -321,55 +309,38 @@
                     </div>
                 </div>
             </div>
-           
             <!-- footer @e -->
         </div>
         <!-- wrap @e -->
     </div>
     <!-- app-root @e -->
-   
     <!-- @@ Profile Edit Modal @e -->
     <div class="modal fade" role="dialog" id="profile-edit">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
                 <div class="modal-body modal-body-lg">
-                    <h5 class="title">Update Profile</h5>
+                    <h5 class="title">Change Client Password</h5>
                     <ul class="nk-nav nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#personal">Personal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#address">Organization</a>
+                            <a class="nav-link active" data-bs-toggle="tab" href="#personal">Change Password</a>
                         </li>
                     </ul><!-- .nav-tabs -->
                     <div class="tab-content">
                         <div class="tab-pane active" id="personal">
                             <div class="row gy-4">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="form-label" for="full-name">First Name</label>
-                                        <input type="text" class="form-control form-control-lg" id="full-name" value="Abu Bin Ishtiyak" placeholder="Enter First name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="display-name">Last Name</label>
-                                        <input type="text" class="form-control form-control-lg" id="display-name" value="Ishtiyak" placeholder="Enter Last name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="phone-no">Phone Number</label>
-                                        <input type="text" class="form-control form-control-lg" id="phone-no" value="+880" placeholder="Phone Number">
+                                        <label class="form-label" for="full-name">Enter New Password</label>
+                                        <input type="text" class="form-control form-control-lg" id="full-name" placeholder="Enter Nw Password">
                                     </div>
                                 </div>
                                
-
+                              
                                 <div class="col-12">
                                     <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
                                         <li>
-                                            <a href="#" data-bs-dismiss="modal" class="btn btn-lg btn-primary">Update Profile</a>
+                                            <a href="#" data-bs-dismiss="modal" class="btn btn-lg btn-primary">Update Password</a>
                                         </li>
                                         <li>
                                             <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
@@ -378,33 +349,7 @@
                                 </div>
                             </div>
                         </div><!-- .tab-pane -->
-                        <div class="tab-pane" id="address">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="address-l1">Organization Name</label>
-                                        <input type="text" class="form-control form-control-lg" id="address-l1" value="2337 Kildeer Drive">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="address-l2">Organization Website</label>
-                                        <input type="text" class="form-control form-control-lg" id="address-l2" value="">
-                                    </div>
-                                </div>
-                            
-                                <div class="col-12">
-                                    <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
-                                        <li>
-                                            <a href="#" class="btn btn-lg btn-primary">Update Organization</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!-- .tab-pane -->
+                      
                     </div><!-- .tab-content -->
                 </div><!-- .modal-body -->
             </div><!-- .modal-content -->

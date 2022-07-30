@@ -31249,7 +31249,13 @@ h6 .badge, .h6 .badge {
   opacity: 0;
   transition: all 0.3s;
 }
-.data-item:hover .data-more:before {
+/* .data-item:hover .data-more:before {
+  opacity: 1;
+  height: 40px;
+  width: 40px;
+} */
+
+.data-more:hover:before{
   opacity: 1;
   height: 40px;
   width: 40px;
@@ -41555,4 +41561,23 @@ p.text-soft {
 
 .text-truncate{
   max-width: 300px;
+}
+
+.first-ic{
+  margin-right: 20px;
+}
+
+.iframe
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;  
+  width: 100%;
+  min-height: 100%;
+  padding-top: 4em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }

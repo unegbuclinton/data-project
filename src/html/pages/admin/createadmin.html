@@ -9,8 +9,8 @@
     <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon_gorilla.png">
-    <!-- Page Title  -->
-    <title>Databox Settings | BGA Data Template</title>
+    <!-- Page Title  --> 
+    <title>Create Admin| BGA Data Template</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="./assets/css/dashlite.css?ver=3.0.3">
     <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=3.0.3">
@@ -151,77 +151,118 @@
                 <div class="container-xl wide-xl">
                     <div class="nk-content-inner">
                         <div class="nk-content-body">
-                            <div class="nk-block">
-                                <div class="card card-bordered">
-                                    <div class="card-aside-wrap">
-                                        <div class="card-inner card-inner-lg">
-                                            <div class="nk-block-head nk-block-head-lg">
-                                                <div class="nk-block-between">
-                                                    <div class="nk-block-head-content">
-                                                        <h4 class="nk-block-title">Databox Settings</h4>
-                                                        <div class="nk-block-des">
-                                                            <p>Please enter Databox information.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-block-head-content align-self-start d-lg-none">
-                                                        <a href="#" class="toggle btn btn-icon btn-trigger mt-n1" data-target="userAside"><em class="icon ni ni-menu-alt-r"></em></a>
+                            <div class="components-preview wide-md mx-auto">
+                                <div class="nk-block-head nk-block-head-lg wide-sm">
+                                    <div class="nk-block-head-content">
+                                        <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Back</span></a></div>
+                                        <h2 class="nk-block-title fw-normal">Create Administrator</h2>
+                                        <div class="nk-block-des">
+                                            <p class="lead">Please complete the form below to create a team member</p>
+                                        </div>
+                                    </div>
+                                </div><!-- .nk-block-head -->
+                                <div class="nk-block nk-block-lg">
+                                    <div class="card card-bordered">
+                                        <form class="nk-stepper stepper-init is-alter nk-stepper-s1" action="#" id="stepper-create-profile">
+                                            <div class="row g-0 col-sep col-sep-md col-sep-xl">
+                                                <div class="col-md-4 col-xl-4">
+                                                    <div class="card-inner">
+                                                        <ul class="nk-stepper-nav nk-stepper-nav-s1 stepper-nav is-vr">
+                                                           
+                                                            <li>
+                                                                <div class="step-item">
+                                                                    <div class="step-text">
+                                                                        <div class="lead-text">Profile Info</div>
+                                                                        <div class="sub-text">Enter the profile info</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            
+                                                           
+                                                        </ul>
                                                     </div>
                                                 </div>
-                                            </div><!-- .nk-block-head -->
-                                            <div class="nk-block">
-                                                <div class="nk-data data-list">
-                                                    <div class="data-head">
-                                                        <h6 class="overline-title">Basics</h6>
-                                                    </div>
-                                                    <div class="data-item" >
-                                                        <div class="data-col">
-                                                            <span class="data-label">Databox URL</span>
-                                                            <span class="data-value text-truncate">https://reports.biggorilla.tech/datawall/1868aba7d5d1107a78d923b3cf28194f0624311ca</span>
-                                                        </div>
-                                                        <div class="data-col data-col-end" >
-                                                            <span class="data-more first-ic"><em class="icon ni ni-eye"></em></span>
+                                                <div class="col-md-8 col-xl-8">
+                                                    <div class="card-inner">
+                                                        <div class="nk-stepper-content">
+                                                            <div class="nk-stepper-steps stepper-steps">
+                                                                
+                                                                <div class="nk-stepper-step">
+                                                                    <h5 class="title mb-4">Profile info</h5>
+                                                                    <div class="row g-3">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-first-name">First Name</label>
+                                                                                <div class="form-control-wrap">
+                                                                                    <input type="text" class="form-control" id="cp1-first-name" name="cp1-first-name" placeholder="First name" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-last-name">Last Name</label>
+                                                                                <div class="form-control-wrap">
+                                                                                    <input type="text" class="form-control" id="cp1-last-name" name="cp1-last-name" placeholder="Last name" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-date-of-birth">Phone</label>
+                                                                                <div class="form-control-wrap">
+                                                                                    <input type="text" class="form-control" id="cp1-date-of-birth" name="cp1-date-of-birth" placeholder="12345689" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-contact-email">Contact Email</label>
+                                                                                <div class="form-control-wrap">
+                                                                                    <input type="email" class="form-control" id="cp1-contact-email" name="cp1-contact-email" placeholder="info@biggorillaapps.com" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-contact-email">Permissions</label>
+                                                                                <div class="form-control-wrap">
+                                                                                   <select name="" id="" class="form-control">
+                                                                                    <option value="Administrator">Administrator</option>
+                                                                                    <option value="Editor">Editor</option>
+                                                                                   </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-profile-description">Password</label>
 
-                                                            <span class="data-more" data-bs-toggle="modal" data-bs-target="#profile-edit"><em class="icon ni ni-edit"></em></span>
+                                                                                <div class="form-control-wrap">
+                                                                                    <div class="input-group">        
+                                                                                        <input type="text" class="form-control" placeholder="generate password" id="account-password" required>
+                                                                                        <div class="input-group-append">                <button class="btn btn-outline-primary btn-dim" id="generator">Generate</button> 
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                </div>
+                                                              
+                                                            </div>
+                                                            <ul class="nk-stepper-pagination pt-4 gx-4 gy-2 stepper-pagination">
+                                                               
+                                                                <li class="step-next"><button class="btn btn-primary">Submit</button></li>
+                                                             
+                                                            </ul>
                                                         </div>
-                                                        
-                                                    </div><!-- data-item -->
-                                                </div><!-- data-list -->
-                                            </div><!-- .nk-block -->
-                                        </div>
-                                        <div class="card-aside card-aside-left user-aside toggle-slide toggle-slide-left toggle-break-lg" data-toggle-body="true" data-content="userAside" data-toggle-screen="lg" data-toggle-overlay="true">
-                                            <div class="card-inner-group" data-simplebar>
-                                                <div class="card-inner">
-                                                    <div class="user-card">
-                                                        <div class="user-avatar bg-primary">
-                                                            <span class="text-white">AB</span>
-                                                        </div>
-                                                        <div class="user-info">
-                                                            <span class="lead-text">Abu Bin Ishtiyak</span>
-                                                            <span class="sub-text">info@softnio.com</span>
-                                                        </div>
-                                                       
-                                                    </div><!-- .user-card -->
-                                                </div><!-- .card-inner -->
-                                               
-                                                <div class="card-inner p-0">
-                                                    <ul class="link-list-menu">
-                                                        <ul class="link-list-menu">
-                                                            <li><a  href="html/user-profile-regular.html"><em class="icon ni ni-user-fill-c"></em><span>Account Infomation</span></a></li>
-                                
-                                                            <li><a class="active" href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em><span>Databox </span></a></li>
-    
-                                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em></em><span>Datastudio</span></a></li>
-    
-                                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em><span>Portermetrics</span></a></li>
-    
-                                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-lock-alt-fill"></em><span>Security Settings</span></a></li>
-                                                    </ul>
-                                                </div><!-- .card-inner -->
-                                            </div><!-- .card-inner-group -->
-                                        </div><!-- card-aside -->
-                                    </div><!-- .card-aside-wrap -->
-                                </div><!-- .card -->
-                            </div><!-- .nk-block -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div><!-- .nk-block -->
+                            </div><!-- .components-preview -->
                         </div>
                     </div>
                 </div>
@@ -291,51 +332,28 @@
         <!-- wrap @e -->
     </div>
     <!-- app-root @e -->
-   
-    <!-- @@ Profile Edit Modal @e -->
-    <div class="modal fade" role="dialog" id="profile-edit">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
-                <div class="modal-body modal-body-lg">
-                    <h5 class="title">Update Databox Settings</h5>
-                    <ul class="nk-nav nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#personal">URL</a>
-                        </li>
-                    </ul><!-- .nav-tabs -->
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="personal">
-                            <div class="row gy-4">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="form-label" for="full-name">Databox URL</label>
-                                        <input type="text" class="form-control form-control-lg" id="full-name" value="https://www.hhhfffywusbsvsfsr.com" placeholder="Enter Databox URL">
-                                    </div>
-                                </div>
-                               
-                              
-                                <div class="col-12">
-                                    <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
-                                        <li>
-                                            <a href="#" data-bs-dismiss="modal" class="btn btn-lg btn-primary">Update Settings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!-- .tab-pane -->
-                      
-                    </div><!-- .tab-content -->
-                </div><!-- .modal-body -->
-            </div><!-- .modal-content -->
-        </div><!-- .modal-dialog -->
-    </div><!-- .modal -->
+  
     <!-- JavaScript -->
     <script src="./assets/js/bundle.js?ver=3.0.3"></script>
     <script src="./assets/js/scripts.js?ver=3.0.3"></script>
+    <script>
+    let password = document.getElementById("account-password");
+    let generator = document.getElementById("generator");
+
+    generator.addEventListener('click', function genPassword(e) {
+        e.preventDefault()
+        let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let passwordLength = 12;
+        let password = "";
+        for (var i = 0; i <= passwordLength; i++) {
+            let randomNumber = Math.floor(Math.random() * chars.length);
+            password += chars.substring(randomNumber, randomNumber +1);
+        }
+        document.getElementById("account-password").value = password;
+    } )
+    
+
+    </script>
 </body>
 
 </html>
