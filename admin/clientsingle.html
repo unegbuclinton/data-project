@@ -2,18 +2,16 @@
 <html lang="zxx" class="js">
 
 <head>
-    <base href="../../../">
     <meta charset="utf-8">
-    <meta name="author" content="Softnio">
+    <meta name="author" content="BGA">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <meta name="description" content="A Better way to view data.">
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="./images/favicon_gorilla.png">
+    <link rel="shortcut icon" href="../src/images/favicon_gorilla.png">
     <!-- Page Title  -->
-    <title>Databox Settings | BGA Data Template</title>
+    <title>Home | BGA Data Template</title>
     <!-- StyleSheets  -->
-    <link rel="stylesheet" href="./assets/css/dashlite.css?ver=3.0.3">
-    <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=3.0.3">
+    <link rel="stylesheet" href="../src/assets/css/dashlite.css">
 </head>
 
 <body class="nk-body npc-invest bg-lighter ">
@@ -29,9 +27,9 @@
                         </div>
                      
                         <div class="nk-header-brand">
-                            <a href="html/index.html" class="logo-link">
-                                <img class="logo-light logo-img" src="./images/bgalogowhite.png" srcset="./images/bgalogowhite.png 2x" alt="logo">
-                                <img class="logo-dark logo-img" src="./images/bgalogowhite.png" srcset="./images/bgalogowhite.png 2x" alt="logo-dark">
+                            <a href="home.html" class="logo-link">
+                                <img class="logo-light logo-img" src="../src/images/bgalogowhite.png" srcset="../src/images/bgalogowhite.png 2x" alt="logo">
+                                <img class="logo-dark logo-img logo-img-lg" src="../src/images/bgalogowhite.png" srcset="../src/images/bgalogowhite.png 2x" alt="logo-dark">
                             </a>
                         </div><!-- .nk-header-brand -->
                         <div class="nk-header-menu" data-content="headerNav">
@@ -58,17 +56,13 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/index.html" class="nk-menu-link">
-                                                <span class="nk-menu-text">Active Clients</span>
+                                            <a href="clients.html" class="nk-menu-link">
+                                                <span class="nk-menu-text">All Clients</span>
                                             </a>
                                         </li><!-- .nk-menu-item -->
+                                      
                                         <li class="nk-menu-item">
-                                            <a href="html/index-sales.html" class="nk-menu-link">
-                                                <span class="nk-menu-text">Suspended Clients</span>
-                                            </a>
-                                        </li><!-- .nk-menu-item -->
-                                        <li class="nk-menu-item">
-                                            <a href="html/index-crypto.html" class="nk-menu-link">
+                                            <a href="createclient.html" class="nk-menu-link">
                                                 <span class="nk-menu-text">Add Client</span>
                                             </a>
                                         </li><!-- .nk-menu-item -->
@@ -80,19 +74,15 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/apps-messages.html" class="nk-menu-link"><span class="nk-menu-text">All Team</span></a>
+                                            <a href="team.html" class="nk-menu-link"><span class="nk-menu-text">All Team</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/apps-inbox.html" class="nk-menu-link"><span class="nk-menu-text">Add Team Member (Admin)</span></a>
+                                            <a href="createadmin.html" class="nk-menu-link"><span class="nk-menu-text">Add Team Member</span></a>
                                         </li>
                                       
                                     </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
-                                <li class="nk-menu-item">
-                                    <a href="#" class="nk-menu-link">
-                                        Settings
-                                    </a>
-                                </li>
+                               
                               <!-- .nk-menu-item -->
                             </ul><!-- .nk-menu -->
                         </div><!-- .nk-header-menu -->
@@ -126,9 +116,9 @@
                                       
                                         <div class="dropdown-inner">
                                             <ul class="link-list">
-                                                <li><a href="html/user-profile-regular.html"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                                                <li><a href="html/user-profile-setting.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
-                                                <li><a href="html/user-profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
+                                                <li><a href="adminprofile.html"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+                                                <li><a href="adminsecuritysettings.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
+                                               
                                                
                                             </ul>
                                         </div>
@@ -158,9 +148,9 @@
                                             <div class="nk-block-head nk-block-head-lg">
                                                 <div class="nk-block-between">
                                                     <div class="nk-block-head-content">
-                                                        <h4 class="nk-block-title">Databox Settings</h4>
+                                                        <h4 class="nk-block-title">Account Information</h4>
                                                         <div class="nk-block-des">
-                                                            <p>Please enter Databox information.</p>
+                                                            <p>Basic info about user and organization</p>
                                                         </div>
                                                     </div>
                                                     <div class="nk-block-head-content align-self-start d-lg-none">
@@ -171,21 +161,57 @@
                                             <div class="nk-block">
                                                 <div class="nk-data data-list">
                                                     <div class="data-head">
-                                                        <h6 class="overline-title">Basics</h6>
+                                                        <h6 class="overline-title">Profile</h6>
                                                     </div>
-                                                    <div class="data-item" >
+                                                    <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
                                                         <div class="data-col">
-                                                            <span class="data-label">Databox URL</span>
-                                                            <span class="data-value text-truncate">https://reports.biggorilla.tech/datawall/1868aba7d5d1107a78d923b3cf28194f0624311ca</span>
+                                                            <span class="data-label">Full Name</span>
+                                                            <span class="data-value">Abu Bin Ishtiyak</span>
                                                         </div>
-                                                        <div class="data-col data-col-end" >
-                                                            <span class="data-more first-ic"><em class="icon ni ni-eye"></em></span>
-
-                                                            <span class="data-more" data-bs-toggle="modal" data-bs-target="#profile-edit"><em class="icon ni ni-edit"></em></span>
-                                                        </div>
-                                                        
+                                                        <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
                                                     </div><!-- data-item -->
+                                                    <div class="data-item">
+                                                        <div class="data-col">
+                                                            <span class="data-label">Email</span>
+                                                            <span class="data-value">info@softnio.com</span>
+                                                        </div>
+                                                        <div class="data-col data-col-end"><span class="data-more disable"><em class="icon ni ni-lock-alt"></em></span></div>
+                                                    </div><!-- data-item -->
+                                                    <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
+                                                        <div class="data-col">
+                                                            <span class="data-label">Phone Number</span>
+                                                            <span class="data-value text-soft">Not add yet</span>
+                                                        </div>
+                                                        <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
+                                                    </div><!-- data-item -->
+                                                   
+                                                   
                                                 </div><!-- data-list -->
+                                                <div class="nk-data data-list">
+                                                    <div class="data-head">
+                                                        <h6 class="overline-title">Organization Details</h6>
+                                                    </div>
+                                                    <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
+                                                        <div class="data-col">
+                                                            <span class="data-label">Name</span>
+                                                            <span class="data-value">IRUSA</span>
+                                                        </div>
+                                                        <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
+                                                    </div><!-- data-item -->
+                                                    <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
+                                                        <div class="data-col">
+                                                            <span class="data-label">Website</span>
+                                                            <span class="data-value">https://irusa.org</span>
+                                                        </div>
+                                                        <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
+                                                    </div><!-- data-item -->
+                                                   
+                                                </div><!-- data-list -->
+                                              
+                                              
+                                                    
+                                                   
+                                               
                                             </div><!-- .nk-block -->
                                         </div>
                                         <div class="card-aside card-aside-left user-aside toggle-slide toggle-slide-left toggle-break-lg" data-toggle-body="true" data-content="userAside" data-toggle-screen="lg" data-toggle-overlay="true">
@@ -197,7 +223,7 @@
                                                         </div>
                                                         <div class="user-info">
                                                             <span class="lead-text">Abu Bin Ishtiyak</span>
-                                                            <span class="sub-text">info@softnio.com</span>
+                                                            <span class="sub-text">info@irusa.org</span>
                                                         </div>
                                                        
                                                     </div><!-- .user-card -->
@@ -205,16 +231,16 @@
                                                
                                                 <div class="card-inner p-0">
                                                     <ul class="link-list-menu">
-                                                        <ul class="link-list-menu">
-                                                            <li><a  href="html/user-profile-regular.html"><em class="icon ni ni-user-fill-c"></em><span>Account Infomation</span></a></li>
-                                
-                                                            <li><a class="active" href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em><span>Databox </span></a></li>
-    
-                                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em></em><span>Datastudio</span></a></li>
-    
-                                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-chart-up"></em><span>Portermetrics</span></a></li>
-    
-                                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-lock-alt-fill"></em><span>Security Settings</span></a></li>
+                                                        <li><a class="active" href="clientsingle.html"><em class="icon ni ni-user-fill-c"></em><span>Account Infomation</span></a></li>
+                            
+                                                        <li><a href="databoxsettings.html"><em class="icon ni ni-chart-up"></em><span>Databox </span></a></li>
+
+                                                        <li><a href="datastudiosettings.html"><em class="icon ni ni-chart-up"></em></em><span>Datastudio</span></a></li>
+
+                                                        <li><a href="portermetricssettings.html"><em class="icon ni ni-chart-up"></em><span>Portermetrics</span></a></li>
+
+                                                        <li><a href="clientsettings.html"><em class="icon ni ni-lock-alt-fill"></em><span>Security Settings</span></a></li>
+                                                       
                                                     </ul>
                                                 </div><!-- .card-inner -->
                                             </div><!-- .card-inner-group -->
@@ -298,27 +324,42 @@
             <div class="modal-content">
                 <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
                 <div class="modal-body modal-body-lg">
-                    <h5 class="title">Update Databox Settings</h5>
+                    <h5 class="title">Update Profile</h5>
                     <ul class="nk-nav nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#personal">URL</a>
+                            <a class="nav-link active" data-bs-toggle="tab" href="#personal">Personal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#address">Organization</a>
                         </li>
                     </ul><!-- .nav-tabs -->
                     <div class="tab-content">
                         <div class="tab-pane active" id="personal">
                             <div class="row gy-4">
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="form-label" for="full-name">Databox URL</label>
-                                        <input type="text" class="form-control form-control-lg" id="full-name" value="https://www.hhhfffywusbsvsfsr.com" placeholder="Enter Databox URL">
+                                        <label class="form-label" for="full-name">First Name</label>
+                                        <input type="text" class="form-control form-control-lg" id="full-name" value="Abu Bin Ishtiyak" placeholder="Enter First name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="display-name">Last Name</label>
+                                        <input type="text" class="form-control form-control-lg" id="display-name" value="Ishtiyak" placeholder="Enter Last name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="phone-no">Phone Number</label>
+                                        <input type="text" class="form-control form-control-lg" id="phone-no" value="+880" placeholder="Phone Number">
                                     </div>
                                 </div>
                                
-                              
+
                                 <div class="col-12">
                                     <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
                                         <li>
-                                            <a href="#" data-bs-dismiss="modal" class="btn btn-lg btn-primary">Update Settings</a>
+                                            <a href="#" data-bs-dismiss="modal" class="btn btn-lg btn-primary">Update Profile</a>
                                         </li>
                                         <li>
                                             <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
@@ -327,15 +368,42 @@
                                 </div>
                             </div>
                         </div><!-- .tab-pane -->
-                      
+                        <div class="tab-pane" id="address">
+                            <div class="row gy-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="address-l1">Organization Name</label>
+                                        <input type="text" class="form-control form-control-lg" id="address-l1" value="2337 Kildeer Drive">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="address-l2">Organization Website</label>
+                                        <input type="text" class="form-control form-control-lg" id="address-l2" value="">
+                                    </div>
+                                </div>
+                            
+                                <div class="col-12">
+                                    <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                        <li>
+                                            <a href="#" class="btn btn-lg btn-primary">Update Organization</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- .tab-pane -->
                     </div><!-- .tab-content -->
                 </div><!-- .modal-body -->
             </div><!-- .modal-content -->
         </div><!-- .modal-dialog -->
     </div><!-- .modal -->
     <!-- JavaScript -->
-    <script src="./assets/js/bundle.js?ver=3.0.3"></script>
-    <script src="./assets/js/scripts.js?ver=3.0.3"></script>
+    <script src="../src/assets/js/bundle.js?ver=3.0.3"></script>
+    <script src="../src/assets/js/scripts.js?ver=3.0.3"></script>
+    <script src="../src/assets/js/charts/gd-default.js?ver=3.0.3"></script>
 </body>
 
 </html>
