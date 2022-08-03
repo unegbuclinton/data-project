@@ -1,0 +1,155 @@
+<%- include('partials/header') %> 
+            <!-- content @s -->
+            <div class="nk-content nk-content-fluid">
+                <div class="container-xl wide-xl">
+                    <div class="nk-content-inner">
+                        <div class="nk-content-body">
+                            <div class="components-preview wide-md mx-auto">
+                                <div class="nk-block-head nk-block-head-lg wide-sm">
+                                    <div class="nk-block-head-content">
+                                        <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Back</span></a></div>
+                                        <h2 class="nk-block-title fw-normal">Create Administrator</h2>
+                                        <div class="nk-block-des">
+                                            <p class="lead">Please complete the form below to create a team member</p>
+                                        </div>
+                                    </div>
+                                </div><!-- .nk-block-head -->
+                                <div class="nk-block nk-block-lg">
+                                    <div class="card card-bordered">
+                                        <form class="nk-stepper stepper-init is-alter nk-stepper-s1" action="#" id="stepper-create-profile">
+                                            <div class="row g-0 col-sep col-sep-md col-sep-xl">
+                                                <div class="col-md-4 col-xl-4">
+                                                    <div class="card-inner">
+                                                        <ul class="nk-stepper-nav nk-stepper-nav-s1 stepper-nav is-vr">
+                                                           
+                                                            <li>
+                                                                <div class="step-item">
+                                                                    <div class="step-text">
+                                                                        <div class="lead-text">Profile Info</div>
+                                                                        <div class="sub-text">Enter the profile info</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            
+                                                           
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-xl-8">
+                                                    <div class="card-inner">
+                                                        <div class="nk-stepper-content">
+                                                            <div class="nk-stepper-steps stepper-steps">
+                                                                
+                                                                <div class="nk-stepper-step">
+                                                                    <h5 class="title mb-4">Profile info</h5>
+                                                                    <div class="row g-3">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-first-name">First Name</label>
+                                                                                <div class="form-control-wrap">
+                                                                                    <input type="text" class="form-control" id="cp1-first-name" name="cp1-first-name" placeholder="First name" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-last-name">Last Name</label>
+                                                                                <div class="form-control-wrap">
+                                                                                    <input type="text" class="form-control" id="cp1-last-name" name="cp1-last-name" placeholder="Last name" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-date-of-birth">Phone</label>
+                                                                                <div class="form-control-wrap">
+                                                                                    <input type="text" class="form-control" id="cp1-date-of-birth" name="cp1-date-of-birth" placeholder="12345689" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-contact-email">Contact Email</label>
+                                                                                <div class="form-control-wrap">
+                                                                                    <input type="email" class="form-control" id="cp1-contact-email" name="cp1-contact-email" placeholder="info@biggorillaapps.com" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-contact-email">Permissions</label>
+                                                                                <div class="form-control-wrap">
+                                                                                   <select name="" id="" class="form-control">
+                                                                                    <option value="Administrator">Administrator</option>
+                                                                                    <option value="Editor">Editor</option>
+                                                                                   </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="cp1-profile-description">Password</label>
+
+                                                                                <div class="form-control-wrap">
+                                                                                    <div class="input-group">        
+                                                                                        <input type="text" class="form-control" placeholder="generate password" id="account-password" required>
+                                                                                        <div class="input-group-append">                <button class="btn btn-outline-primary btn-dim" id="generator">Generate</button> 
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                </div>
+                                                              
+                                                            </div>
+                                                            <ul class="nk-stepper-pagination pt-4 gx-4 gy-2 stepper-pagination">
+                                                               
+                                                                <li class="step-next"><button class="btn btn-primary">Submit</button></li>
+                                                             
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div><!-- .nk-block -->
+                            </div><!-- .components-preview -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content @e -->
+            <%- include('partials/footer') %> 
+        </div>
+        <!-- wrap @e -->
+    </div>
+    <!-- app-root @e -->
+  
+    <!-- JavaScript -->
+    
+<script src="../assets/js/bundle.js?ver=3.0.3"></script>
+<script src="../assets/js/scripts.js?ver=3.0.3"></script>
+<script src="../assets/js/charts/gd-default.js?ver=3.0.3"></script>
+    <script>
+    let password = document.getElementById("account-password");
+    let generator = document.getElementById("generator");
+
+    generator.addEventListener('click', function genPassword(e) {
+        e.preventDefault()
+        let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let passwordLength = 12;
+        let password = "";
+        for (var i = 0; i <= passwordLength; i++) {
+            let randomNumber = Math.floor(Math.random() * chars.length);
+            password += chars.substring(randomNumber, randomNumber +1);
+        }
+        document.getElementById("account-password").value = password;
+    } )
+    
+
+    </script>
+</body>
+
+</html>

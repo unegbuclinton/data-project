@@ -1,0 +1,137 @@
+<%- include('partials/header') %> 
+            <!-- content @s -->
+            <div class="nk-content nk-content-fluid">
+                <div class="container-xl wide-xl">
+                    <div class="nk-content-inner">
+                        <div class="nk-content-body">
+                            <div class="nk-block">
+                                <div class="card card-bordered">
+                                    <div class="card-aside-wrap">
+                                        <div class="card-inner card-inner-lg">
+                                            <div class="nk-block-head nk-block-head-lg">
+                                                <div class="nk-block-between">
+                                                    <div class="nk-block-head-content">
+                                                        <h4 class="nk-block-title">Portermetrics Settings</h4>
+                                                        <div class="nk-block-des">
+                                                            <p>Please enter Portermetrics information.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-block-head-content align-self-start d-lg-none">
+                                                        <a href="#" class="toggle btn btn-icon btn-trigger mt-n1" data-target="userAside"><em class="icon ni ni-menu-alt-r"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div><!-- .nk-block-head -->
+                                            <div class="nk-block">
+                                                <div class="nk-data data-list">
+                                                    <div class="data-head">
+                                                        <h6 class="overline-title">Basics</h6>
+                                                    </div>
+                                                    <div class="data-item" >
+                                                        <div class="data-col">
+                                                            <span class="data-label">Portermetrics URL</span>
+                                                            <span class="data-value text-truncate">https://reports.biggorilla.tech/datawall/1868aba7d5d1107a78d923b3cf28194f0624311ca</span>
+                                                        </div>
+                                                        <div class="data-col data-col-end" >
+                                                            <a href="databoxpreview.html">
+                                                                <span class="data-more first-ic"><em class="icon ni ni-eye"></em></span>
+                                                            </a>
+
+                                                            <span class="data-more" data-bs-toggle="modal" data-bs-target="#profile-edit"><em class="icon ni ni-edit"></em></span>
+                                                        </div>
+                                                        
+                                                    </div><!-- data-item -->
+                                                </div><!-- data-list -->
+                                            </div><!-- .nk-block -->
+                                        </div>
+                                        <div class="card-aside card-aside-left user-aside toggle-slide toggle-slide-left toggle-break-lg" data-toggle-body="true" data-content="userAside" data-toggle-screen="lg" data-toggle-overlay="true">
+                                            <div class="card-inner-group" data-simplebar>
+                                                <div class="card-inner">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar bg-primary">
+                                                            <span class="text-white">AB</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="lead-text">Abu Bin Ishtiyak</span>
+                                                            <span class="sub-text">info@softnio.com</span>
+                                                        </div>
+                                                       
+                                                    </div><!-- .user-card -->
+                                                </div><!-- .card-inner -->
+                                               
+                                                <div class="card-inner p-0">
+                                                    <ul class="link-list-menu">
+                                                        <ul class="link-list-menu">
+                                                            <li><a href="clientsingle.html"><em class="icon ni ni-user-fill-c"></em><span>Account Infomation</span></a></li>
+                                
+                                                            <li><a href="databoxsettings.html"><em class="icon ni ni-chart-up"></em><span>Databox </span></a></li>
+    
+                                                            <li><a href="datastudiosettings.html"><em class="icon ni ni-chart-up"></em></em><span>Datastudio</span></a></li>
+    
+                                                            <li><a class="active" href="portermetricssettings.html"><em class="icon ni ni-chart-up"></em><span>Portermetrics</span></a></li>
+    
+                                                            <li><a href="clientsettings.html"><em class="icon ni ni-lock-alt-fill"></em><span>Security Settings</span></a></li>
+                                                    </ul>
+                                                </div><!-- .card-inner -->
+                                            </div><!-- .card-inner-group -->
+                                        </div><!-- card-aside -->
+                                    </div><!-- .card-aside-wrap -->
+                                </div><!-- .card -->
+                            </div><!-- .nk-block -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content @e -->
+            <%- include('partials/footer') %> 
+        </div>
+        <!-- wrap @e -->
+    </div>
+    <!-- app-root @e -->
+   
+    <!-- @@ Profile Edit Modal @e -->
+    <div class="modal fade" role="dialog" id="profile-edit">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                <div class="modal-body modal-body-lg">
+                    <h5 class="title">Update Portermetrics Settings</h5>
+                    <ul class="nk-nav nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#personal">URL</a>
+                        </li>
+                    </ul><!-- .nav-tabs -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="personal">
+                            <div class="row gy-4">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="full-name">Portermetrics URL</label>
+                                        <input type="text" class="form-control form-control-lg" id="full-name" value="https://www.hhhfffywusbsvsfsr.com" placeholder="Enter Databox URL">
+                                    </div>
+                                </div>
+            
+                                <div class="col-12">
+                                    <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                        <li>
+                                            <a href="#" data-bs-dismiss="modal" class="btn btn-lg btn-primary">Update Settings</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- .tab-pane -->
+                      
+                    </div><!-- .tab-content -->
+                </div><!-- .modal-body -->
+            </div><!-- .modal-content -->
+        </div><!-- .modal-dialog -->
+    </div><!-- .modal -->
+    <!-- JavaScript -->
+    <script src="../assets/js/bundle.js?ver=3.0.3"></script>
+    <script src="../assets/js/scripts.js?ver=3.0.3"></script>
+    <script src="../assets/js/charts/gd-default.js?ver=3.0.3"></script>
+</body>
+
+</html>

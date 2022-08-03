@@ -1,0 +1,307 @@
+<%- include('partials/header') %> 
+            <!-- content @s -->
+            <div class="nk-content nk-content-fluid">
+                <div class="container-xl wide-xl">
+                    <div class="nk-content-inner">
+                        <div class="nk-content-body">
+                            <div class="nk-block-head nk-block-head-sm">
+                                <div class="nk-block-between">
+                                    <div class="nk-block-head-content">
+                                        <h3 class="nk-block-title page-title">Home - Overview</h3>
+                                        <div class="nk-block-des text-soft">
+                                            <p>General summary of activities</p>
+                                        </div>
+                                    </div><!-- .nk-block-head-content -->
+                                    <div class="nk-block-head-content">
+                                        <div class="toggle-wrap nk-block-tools-toggle">
+                                            <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
+                                           
+                                        </div>
+                                    </div><!-- .nk-block-head-content -->
+                                </div><!-- .nk-block-between -->
+                            </div><!-- .nk-block-head -->
+                            <div class="nk-block">
+                                <div class="row g-gs">
+                                    <div class="col-xxl-12">
+                                        <div class="row g-gs">
+                                           
+                                            <div class="col-lg-12 col-xxl-12">
+                                                <div class="row g-gs">
+                                                    <div class="col-sm-6 col-lg-6 col-xxl-6">
+                                                        <div class="card card-bordered">
+                                                            <div class="card-inner">
+                                                                <div class="card-title-group align-start mb-2">
+                                                                    <div class="card-title">
+                                                                        <h6 class="title">Clients</h6>
+                                                                    </div>
+                                                                    <div class="card-tools">
+                                                                        <em class="card-hint icon ni ni-help-fill" data-bs-toggle="tooltip" data-bs-placement="left" title="Total active subscription"></em>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="align-end flex-sm-wrap g-4 flex-md-nowrap">
+                                                                    <div class="nk-sale-data">
+                                                                        <span class="amount">56</span>
+                                                                        
+                                                                    </div>
+                                                                    <div class="nk-sales-ck">
+                                                                        <canvas class="sales-bar-chart" id="activeSubscription"></canvas>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .card -->
+                                                    </div><!-- .col -->
+                                                    <div class="col-sm-6 col-lg-6 col-xxl-6">
+                                                        <div class="card card-bordered">
+                                                            <div class="card-inner">
+                                                                <div class="card-title-group align-start mb-2">
+                                                                    <div class="card-title">
+                                                                        <h6 class="title">Team</h6>
+                                                                    </div>
+                                                                    <div class="card-tools">
+                                                                        <em class="card-hint icon ni ni-help-fill" data-bs-toggle="tooltip" data-bs-placement="left" title="Daily Avg. subscription"></em>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="align-end flex-sm-wrap g-4 flex-md-nowrap">
+                                                                    <div class="nk-sale-data">
+                                                                        <span class="amount">4</span>
+                                                                       
+                                                                    </div>
+                                                                    <div class="nk-sales-ck">
+                                                                        <canvas class="sales-bar-chart" id="totalSubscription"></canvas>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .card -->
+                                                    </div><!-- .col -->
+                                                </div><!-- .row -->
+                                            </div><!-- .col -->
+                                        </div><!-- .row -->
+                                    </div><!-- .col -->
+                                  
+                                   
+                                    <div class="col-md-6 col-xxl-4">
+                                        <div class="card card-bordered card-full">
+                                            <div class="card-inner-group">
+                                                <div class="card-inner">
+                                                    <div class="card-title-group">
+                                                        <div class="card-title">
+                                                            <h6 class="title">Recent Clients</h6>
+                                                        </div>
+                                                        <div class="card-tools">
+                                                            <a href="clients.html" class="link">View All</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-inner card-inner-md">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar bg-primary-dim">
+                                                            <span>AB</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="lead-text">Abu Bin Ishtiyak</span>
+                                                            <span class="sub-text">IRUSA</span>
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View Client</span></a></li>
+                            
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-inner card-inner-md">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar bg-pink-dim">
+                                                            <span>SW</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="lead-text">Sharon Walker</span>
+                                                            <span class="sub-text">OBAT Helpers</span>
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View Client</span></a></li>
+                            
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-inner card-inner-md">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar bg-warning-dim">
+                                                            <span>GO</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="lead-text">Gloria Oliver</span>
+                                                            <span class="sub-text">CAIR</span>
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View Client</span></a></li>
+                            
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-inner card-inner-md">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar bg-success-dim">
+                                                            <span>PS</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="lead-text">Phillip Sullivan</span>
+                                                            <span class="sub-text">TCF USA</span>
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View Client</span></a></li>
+                            
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .card -->
+                                    </div><!-- .col -->
+                                      
+                                    <div class="col-md-6 col-xxl-4">
+                                        <div class="card card-bordered card-full">
+                                            <div class="card-inner-group">
+                                                <div class="card-inner">
+                                                    <div class="card-title-group">
+                                                        <div class="card-title">
+                                                            <h6 class="title">Team Members</h6>
+                                                        </div>
+                                                        <div class="card-tools">
+                                                            <a href="team.html" class="link">View All</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-inner card-inner-md">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar bg-primary-dim">
+                                                            <span>AB</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="lead-text">Abu Bin Ishtiyak</span>
+                                                            <span class="sub-text">abu@biggorillaapps.com</span>
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View User</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-inner card-inner-md">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar bg-pink-dim">
+                                                            <span>SW</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="lead-text">Sharon Walker</span>
+                                                            <span class="sub-text">sharon@biggorillaapps.com</span>
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View User</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-inner card-inner-md">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar bg-warning-dim">
+                                                            <span>GO</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="lead-text">Gloria Oliver</span>
+                                                            <span class="sub-text">gloria@biggorillaapps.com</span>
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View User</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-inner card-inner-md">
+                                                    <div class="user-card">
+                                                        <div class="user-avatar bg-success-dim">
+                                                            <span>PS</span>
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <span class="lead-text">Phillip Sullivan</span>
+                                                            <span class="sub-text">phillip@biggorillaapps.com</span>
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View User</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .card -->
+                                    </div><!-- .col -->
+                                   
+                                </div><!-- .row -->
+                            </div><!-- .nk-block -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content @e -->
+            <%- include('partials/footer') %> 
+        </div>
+        <!-- wrap @e -->
+    </div>
+    <!-- app-root @e -->
+   
+    <!-- JavaScript -->
+    <script src="../assets/js/bundle.js?ver=3.0.3"></script>
+    <script src="../assets/js/scripts.js?ver=3.0.3"></script>
+    <script src="../assets/js/charts/gd-default.js?ver=3.0.3"></script>
+</body>
+
+</html>
