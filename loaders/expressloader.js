@@ -11,6 +11,8 @@ const express = require('express')
 const routes = require('../routes/routes')
 
 
+
+
 class ExpressLoader{
     static async startExpress(){
 
@@ -25,16 +27,25 @@ class ExpressLoader{
         app.use(express.json());
 
         app.use(session({
-            secret: 'Our jujunbdg heueuvev dgdg', // fix secret asap
+            secret: settings.sessionSecret, // fix secret asap
             resave: false,
             saveUninitialized: false,
+            cookie: { secure: true }
         }));
           
        
+        app.use(passport.initialize()); 
+        app.use(passport.session());
+
         app.use(function(req, res, next){
             res.locals.messages =  req.flash();
             next();
         })
+        
+        app.use(function(req, res, next){
+            res.locals.user = req.user || null
+            next();
+        });
           
         // Pass app to routes
         routes(app);

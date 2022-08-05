@@ -1,10 +1,11 @@
-const { validateCreateClient } = require('../middlewares/validators/adminvalidators')
+const { validateCreateClient, validateCreateAdmin, validateAdminSignin } = require('../middlewares/validators/adminvalidators')
 
 module.exports = function(app){
 
     const adminAuth = require('../controllers/admin/auth/auth')
+    const adminClient = require('../controllers/admin/client/client')
     const adminTeam = require('../controllers/admin/team/team')
-   
+    const adminDashboard = require('../controllers/admin/dashboard/dashboard')
 
     //Admin Routes @sssssssssssssssssssss
 
@@ -12,8 +13,26 @@ module.exports = function(app){
     .get(adminAuth.display_admin_login)
 
     app.route('/create-client')
-    .get(adminTeam.display_create_client)
-    .post(validateCreateClient, adminTeam.create_client)
+    .get(adminClient.display_create_client)
+    .post(validateCreateClient, adminClient.create_client)
+
+    app.route('/create-admin')
+    .get(adminTeam.display_create_team)
+    .post(validateCreateAdmin, adminTeam.create_team)
+
+    app.route('/login-admin')
+    .post(validateAdminSignin, adminAuth.sigin_admin)
+
+    app.route('/administration')
+    .get(adminDashboard.display_admin_dashboard)
+
+    app.route('/dashboard-summary')
+    .get(adminDashboard.display_admin_dashboard_Summary)
+
+    app.route('/view-all-team-members')
+    .get(adminTeam.display_all_team)
+
+    
 
     // app.route('/forgot-password')
     // .get(adminAuth.display_admin_forgotpassword)

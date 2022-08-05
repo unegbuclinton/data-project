@@ -40,8 +40,14 @@
                                                                 </div>
                                                                 <div class="align-end flex-sm-wrap g-4 flex-md-nowrap">
                                                                     <div class="nk-sale-data">
-                                                                        <span class="amount">56</span>
-                                                                        
+                                                                        <!-- <span class="amount">56</span> -->
+                                                                        <span class="amount" id="clients-number">
+                                                            
+                                                                            <div class="spinner-border text-primary" role="status">  <span class="sr-only" ></span>
+                                                                            </div>
+                                                                            
+                                                                           
+                                                                        </span>
                                                                     </div>
                                                                     <div class="nk-sales-ck">
                                                                         <canvas class="sales-bar-chart" id="activeSubscription"></canvas>
@@ -63,7 +69,13 @@
                                                                 </div>
                                                                 <div class="align-end flex-sm-wrap g-4 flex-md-nowrap">
                                                                     <div class="nk-sale-data">
-                                                                        <span class="amount">4</span>
+                                                                        <span class="amount" id="team-number">
+                                                            
+                                                                            <div class="spinner-border text-primary" role="status">  <span class="sr-only" ></span>
+                                                                            </div>
+                                                                            
+                                                                           
+                                                                        </span>
                                                                        
                                                                     </div>
                                                                     <div class="nk-sales-ck">
@@ -92,94 +104,40 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card-inner card-inner-md">
-                                                    <div class="user-card">
-                                                        <div class="user-avatar bg-primary-dim">
-                                                            <span>AB</span>
-                                                        </div>
-                                                        <div class="user-info">
-                                                            <span class="lead-text">Abu Bin Ishtiyak</span>
-                                                            <span class="sub-text">IRUSA</span>
-                                                        </div>
-                                                        <div class="user-action">
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View Client</span></a></li>
-                            
-                                                                    </ul>
+                                                <% if(clients.length > 0){ %>
+                                                    <% clients.forEach((client, index) =>{ %>
+                                                        <div class="card-inner card-inner-md">
+                                                            <div class="user-card">
+                                                                <div class="user-avatar bg-primary-dim">
+                                                                    <span><%=client.fullNames?.firstname.slice(0, 1).toUpperCase()%><%=client.fullNames?.lastname.slice(0, 1).toUpperCase()%></span>
+                                                                </div>
+                                                                <div class="user-info">
+                                                                    <span class="lead-text"><%=client.fullNames?.firstname%> <%=client.fullNames?.lastname%></span>
+                                                                    <span class="sub-text"><%=client.organization?.name%></span>
+                                                                </div>
+                                                                <div class="user-action">
+                                                                    <div class="drodown">
+                                                                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                            <ul class="link-list-opt no-bdr">
+                                                                                <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View Client</span></a></li>
+                                    
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-inner card-inner-md">
-                                                    <div class="user-card">
-                                                        <div class="user-avatar bg-pink-dim">
-                                                            <span>SW</span>
+                                                    <%})%>
+                                                <%} else {%>
+                                                    <div class="card-inner card-inner-md">
+                                                        <div class="user-card">
+                                                           <p>You havent created any clients yet</p>
                                                         </div>
-                                                        <div class="user-info">
-                                                            <span class="lead-text">Sharon Walker</span>
-                                                            <span class="sub-text">OBAT Helpers</span>
-                                                        </div>
-                                                        <div class="user-action">
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View Client</span></a></li>
-                            
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-inner card-inner-md">
-                                                    <div class="user-card">
-                                                        <div class="user-avatar bg-warning-dim">
-                                                            <span>GO</span>
-                                                        </div>
-                                                        <div class="user-info">
-                                                            <span class="lead-text">Gloria Oliver</span>
-                                                            <span class="sub-text">CAIR</span>
-                                                        </div>
-                                                        <div class="user-action">
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View Client</span></a></li>
-                            
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-inner card-inner-md">
-                                                    <div class="user-card">
-                                                        <div class="user-avatar bg-success-dim">
-                                                            <span>PS</span>
-                                                        </div>
-                                                        <div class="user-info">
-                                                            <span class="lead-text">Phillip Sullivan</span>
-                                                            <span class="sub-text">TCF USA</span>
-                                                        </div>
-                                                        <div class="user-action">
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View Client</span></a></li>
-                            
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                     </div>
+                                                <%}%>
+                                               
+                                               
                                             </div>
                                         </div><!-- .card -->
                                     </div><!-- .col -->
@@ -197,90 +155,38 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card-inner card-inner-md">
-                                                    <div class="user-card">
-                                                        <div class="user-avatar bg-primary-dim">
-                                                            <span>AB</span>
-                                                        </div>
-                                                        <div class="user-info">
-                                                            <span class="lead-text">Abu Bin Ishtiyak</span>
-                                                            <span class="sub-text">abu@biggorillaapps.com</span>
-                                                        </div>
-                                                        <div class="user-action">
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View User</span></a></li>
-                                                                    </ul>
+                                                <% if(team.length > 0){ %>
+                                                    <% team.forEach((admin, index) =>{ %>
+                                                        <div class="card-inner card-inner-md">
+                                                            <div class="user-card">
+                                                                <div class="user-avatar bg-warning-dim">
+                                                                    <span><%=admin.fullNames?.firstname.slice(0, 1).toUpperCase()%><%=admin.fullNames?.lastname.slice(0, 1).toUpperCase()%></span>
+                                                                </div>
+                                                                <div class="user-info">
+                                                                    <span class="lead-text"><%=admin.fullNames?.firstname%> <%=admin.fullNames?.lastname%></span>
+                                                                    <span class="sub-text"><%=admin.username%></span>
+                                                                </div>
+                                                                <div class="user-action">
+                                                                    <div class="drodown">
+                                                                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
+                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                            <ul class="link-list-opt no-bdr">
+                                                                                <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View User</span></a></li>
+                                    
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-inner card-inner-md">
-                                                    <div class="user-card">
-                                                        <div class="user-avatar bg-pink-dim">
-                                                            <span>SW</span>
+                                                    <%})%>
+                                                <%} else {%>
+                                                    <div class="card-inner card-inner-md">
+                                                        <div class="user-card">
+                                                           <p>You havent created any team members yet</p>
                                                         </div>
-                                                        <div class="user-info">
-                                                            <span class="lead-text">Sharon Walker</span>
-                                                            <span class="sub-text">sharon@biggorillaapps.com</span>
-                                                        </div>
-                                                        <div class="user-action">
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View User</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-inner card-inner-md">
-                                                    <div class="user-card">
-                                                        <div class="user-avatar bg-warning-dim">
-                                                            <span>GO</span>
-                                                        </div>
-                                                        <div class="user-info">
-                                                            <span class="lead-text">Gloria Oliver</span>
-                                                            <span class="sub-text">gloria@biggorillaapps.com</span>
-                                                        </div>
-                                                        <div class="user-action">
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View User</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-inner card-inner-md">
-                                                    <div class="user-card">
-                                                        <div class="user-avatar bg-success-dim">
-                                                            <span>PS</span>
-                                                        </div>
-                                                        <div class="user-info">
-                                                            <span class="lead-text">Phillip Sullivan</span>
-                                                            <span class="sub-text">phillip@biggorillaapps.com</span>
-                                                        </div>
-                                                        <div class="user-action">
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><em class="icon ni ni-user-alt"></em><span>View User</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                     </div>
+                                                <%}%>
                                             </div>
                                         </div><!-- .card -->
                                     </div><!-- .col -->
@@ -302,6 +208,37 @@
     <script src="../assets/js/bundle.js?ver=3.0.3"></script>
     <script src="../assets/js/scripts.js?ver=3.0.3"></script>
     <script src="../assets/js/charts/gd-default.js?ver=3.0.3"></script>
+
+    <script>
+        
+const teamContainer = document.getElementById('team-number')
+const clientContainer = document.getElementById('clients-number')
+
+
+async function getDashboardSummary(){
+    const response = await fetch('/dashboard-summary')
+    if(response.status === 200){
+        const summary = await response.json();
+        return summary
+    }else{
+        const summary = null
+        return summary
+    }
+    
+}
+
+
+getDashboardSummary().then(summary =>{
+    if(summary){
+        teamContainer.innerText = summary.team
+        clientContainer.innerText = summary.clients
+    }else{
+        
+    }
+})
+
+
+    </script>
 </body>
 
 </html>

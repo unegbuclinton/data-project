@@ -17,16 +17,18 @@
   },
   "homepage": "https://github.com/hanxolo99/dataproject#readme",
   "dependencies": {
+    "async": "^3.2.4",
     "connect-flash": "^0.1.1",
     "cookie-session": "^2.0.0",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "express-session": "^1.17.3",
     "joi": "^17.6.0",
     "mongoose": "^6.5.0",
     "mongoose-unique-validator": "^3.1.0",
     "nodemon": "^2.0.19",
-    "passport": "^0.6.0",
+    "passport": "^0.5.3",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^7.1.2"
   }

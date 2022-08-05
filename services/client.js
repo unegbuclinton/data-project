@@ -1,9 +1,8 @@
 const UserDao = require('../dao/user')
 
 
-async function createClientService(firstname, lastname, username, phone, password, organizationName, organizationWebsite){
-    const client = await UserDao.getUserByEmail(username)
-    console.log('phone:::' + phone)
+async function createClientService(data){
+    const client = await UserDao.getUserByEmail(data.username)
     if(client.length > 0){
         return {
             result: null,
@@ -14,7 +13,7 @@ async function createClientService(firstname, lastname, username, phone, passwor
         }
     }
    
-    const newClient = await UserDao.createUser(firstname, lastname, username, phone, password, organizationName, organizationWebsite)
+    const newClient = await UserDao.createUser(data)
 
     if(newClient){
         return {
@@ -22,7 +21,6 @@ async function createClientService(firstname, lastname, username, phone, passwor
             error: null
         }
     }else{
-
         return {
             result: null,
             error: {

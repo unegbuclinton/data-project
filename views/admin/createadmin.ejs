@@ -16,7 +16,7 @@
                                 </div><!-- .nk-block-head -->
                                 <div class="nk-block nk-block-lg">
                                     <div class="card card-bordered">
-                                        <form class="nk-stepper stepper-init is-alter nk-stepper-s1" action="#" id="stepper-create-profile">
+                                        <form class="nk-stepper stepper-init is-alter nk-stepper-s1" action="/create-admin"  enctype="application/x-www-form-urlencoded" method="post" id="stepper-create-profile">
                                             <div class="row g-0 col-sep col-sep-md col-sep-xl">
                                                 <div class="col-md-4 col-xl-4">
                                                     <div class="card-inner">
@@ -47,7 +47,7 @@
                                                                             <div class="form-group">
                                                                                 <label class="form-label" for="cp1-first-name">First Name</label>
                                                                                 <div class="form-control-wrap">
-                                                                                    <input type="text" class="form-control" id="cp1-first-name" name="cp1-first-name" placeholder="First name" required>
+                                                                                    <input type="text" class="form-control" id="cp1-first-name" name="firstname" placeholder="First name" required>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -55,7 +55,7 @@
                                                                             <div class="form-group">
                                                                                 <label class="form-label" for="cp1-last-name">Last Name</label>
                                                                                 <div class="form-control-wrap">
-                                                                                    <input type="text" class="form-control" id="cp1-last-name" name="cp1-last-name" placeholder="Last name" required>
+                                                                                    <input type="text" class="form-control" id="cp1-last-name" name="lastname" placeholder="Last name" required>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -63,7 +63,7 @@
                                                                             <div class="form-group">
                                                                                 <label class="form-label" for="cp1-date-of-birth">Phone</label>
                                                                                 <div class="form-control-wrap">
-                                                                                    <input type="text" class="form-control" id="cp1-date-of-birth" name="cp1-date-of-birth" placeholder="12345689" required>
+                                                                                    <input type="text" class="form-control" id="cp1-date-of-birth" name="phone" placeholder="12345689" required>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -71,7 +71,7 @@
                                                                             <div class="form-group">
                                                                                 <label class="form-label" for="cp1-contact-email">Contact Email</label>
                                                                                 <div class="form-control-wrap">
-                                                                                    <input type="email" class="form-control" id="cp1-contact-email" name="cp1-contact-email" placeholder="info@biggorillaapps.com" required>
+                                                                                    <input type="email" class="form-control" id="cp1-contact-email" name="username" placeholder="info@biggorillaapps.com" required>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -79,7 +79,7 @@
                                                                             <div class="form-group">
                                                                                 <label class="form-label" for="cp1-contact-email">Permissions</label>
                                                                                 <div class="form-control-wrap">
-                                                                                   <select name="" id="" class="form-control">
+                                                                                   <select name="permissions" id="" class="form-control">
                                                                                     <option value="Administrator">Administrator</option>
                                                                                     <option value="Editor">Editor</option>
                                                                                    </select>
@@ -92,7 +92,7 @@
 
                                                                                 <div class="form-control-wrap">
                                                                                     <div class="input-group">        
-                                                                                        <input type="text" class="form-control" placeholder="generate password" id="account-password" required>
+                                                                                        <input type="text" class="form-control" placeholder="generate password" id="account-password" name="password" required>
                                                                                         <div class="input-group-append">                <button class="btn btn-outline-primary btn-dim" id="generator">Generate</button> 
                                                                                         </div>
                                                                                     </div>
@@ -105,7 +105,7 @@
                                                             </div>
                                                             <ul class="nk-stepper-pagination pt-4 gx-4 gy-2 stepper-pagination">
                                                                
-                                                                <li class="step-next"><button class="btn btn-primary">Submit</button></li>
+                                                                <li class="step-next"><input type="submit" class="btn btn-primary"></li>
                                                              
                                                             </ul>
                                                         </div>
@@ -150,6 +150,14 @@
     
 
     </script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      setTimeout(function(){
+        $('#flash').remove();
+      }, 5000);
+     })
+</script>
 </body>
 
 </html>

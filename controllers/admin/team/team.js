@@ -1,25 +1,45 @@
 const createErrorNotification = require("../../../middlewares/toast/error")
 const createSuccessNotification = require("../../../middlewares/toast/success")
-const { createClientService } = require("../../../services/client")
+const { createTeamService } = require("../../../services/team")
 
-exports.display_create_client = async (req, res) => {
+
+// Display Create Admin Page
+exports.display_create_team = async (req, res) => {
+    
     try{
-        res.render('admin/createclient')
+       if(req.isAuthenticated()){
+            res.render('admin/createadmin')
+       }else{
+            res.redirect('/login')
+       }
     } catch(err){
         createErrorNotification(req, res, err.message)
     }
 }
 
-exports.create_client = async (req, res) => {
+
+// Create Admin Controller
+exports.create_team = async (req, res) => {
     try{
-       const {firstname, lastname, username, phone, password, organizationName, organizationWebsite} = req.body
-       const { result, error} = await createClientService(firstname, lastname, username, phone, password, organizationName, organizationWebsite)
+       const data = req.body
+       const {result, error} = await createTeamService(data)
        if(error){
             createErrorNotification(req, res, error.message)
        }else{
-            createSuccessNotification(req, res, 'Successfully Created Client')
+            createSuccessNotification(req, res, 'Successfully Created Admin')
        }
     } catch(err){
+        createErrorNotification(req, res, err.message)
+    }
+}
+
+
+//View All Admin
+
+exports.display_all_team = async (req, res) => {
+    try{
+        res.render('admin/team')
+    }catch(err){
         createErrorNotification(req, res, err.message)
     }
 }

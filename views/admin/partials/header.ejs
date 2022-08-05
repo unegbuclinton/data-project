@@ -82,7 +82,7 @@
                                             <a href="team.html" class="nk-menu-link"><span class="nk-menu-text">All Team</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="createadmin.html" class="nk-menu-link"><span class="nk-menu-text">Add Team Member</span></a>
+                                            <a href="/create-admin" class="nk-menu-link"><span class="nk-menu-text">Add Team Member</span></a>
                                         </li>
                                       
                                     </ul><!-- .nk-menu-sub -->
@@ -100,8 +100,16 @@
                                                 <em class="icon ni ni-user-alt"></em>
                                             </div>
                                             <div class="user-info d-none d-xl-block">
-                                                <div class="user-status">Administrator</div>
-                                                <div class="user-name dropdown-indicator">Saeed Ahmed</div>
+                                                <% if (user) { %>
+                                                    <% if (user.role != null) { %>
+                                                        <div class="user-status"><%= user.role %></div>
+                                                    <%} %>
+                                                    <div class="user-name dropdown-indicator">
+                                                        <%=user.fullNames?.firstname%> <%=user.fullNames?.lastname%>
+                                                    </div>
+                                                <%} else {%>
+                                                    <div class="user-status">Unauthorized</div>
+                                                <%} %>
                                             </div>
                                         </div>
                                     </a>
@@ -109,11 +117,11 @@
                                         <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                                             <div class="user-card">
                                                 <div class="user-avatar">
-                                                    <span>SA</span>
+                                                    <span><%=user.fullNames?.firstname.slice(0, 1).toUpperCase()%><%=user.fullNames?.lastname.slice(0, 1).toUpperCase()%></span>
                                                 </div>
                                                 <div class="user-info">
-                                                    <span class="lead-text">Saeed Ahmed</span>
-                                                    <span class="sub-text">saeed@biggorillaapps.com</span>
+                                                    <span class="lead-text"><%=user.fullNames?.firstname%> <%=user.fullNames?.lastname%></span>
+                                                    <span class="sub-text"><%=user.username%></span>
                                                 </div>
                                                 
                                             </div>
@@ -143,12 +151,12 @@
             <span>
                 <% if(messages){ %> 
                   <% if(messages.error != '' && messages.error != undefined && messages.error != null){ %>
-                    <p style="background: white; padding: 10px; border-left: 2px solid #a00202;"
-                    class="alert-text text-prompt-pop text-error text-bg animate__animated animate__bounceInRight" id="flash"><%= messages.error %></p>
+                    <p style="background: #a00202; padding: 10px; color: #fff;"
+                    class="alert-text text-prompt-pop text-error text-bg animate__animated animate__bounceInRight" id="flash"><em class="icon ni ni-cross-circle-fill"></em><%= messages.error %></p>
                   <% } %> 
                   <% if(messages.success != '' && messages.success != undefined && messages.success != null){ %>
-                    <p style="background: white; padding: 10px; border-left: 2px solid #02a002;"
-                    class="alert-text text-prompt-pop text-success text-bg animate__animated animate__bounceInRight" id="flash"><%= messages.success %></p>
+                    <p style="background: #02a002; padding: 10px; color: #fff;"
+                    class="alert-text text-prompt-pop text-success text-bg animate__animated animate__bounceInRight" id="flash"><em class="icon ni ni-check-circle-fill"></em><%= messages.success %></p>
                   <% } %>             
                 <% } %>
              </span>
