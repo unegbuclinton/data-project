@@ -1,26 +1,24 @@
+const createErrorNotification = require("../../../middlewares/toast/error")
+const { signInClient } = require("../../../services/client/auth")
 const passport = require('passport');
 const mongoose = require('mongoose');
-const { signInAdmin } = require('../../../services/auth');
-const createErrorNotification = require('../../../middlewares/toast/error');
-const createSuccessNotification = require('../../../middlewares/toast/success');
 const User = mongoose.model('User');
 const exec = require('exec-then')
-
-// Display Admin Login Page
-
-exports.display_admin_login = async (req, res)=>{
+// display client login
+exports.display_client_login = async (req, res)=>{
     try{
-        res.render('admin/signin')
+        res.render('clients/login')
     } catch(err){
         console.log(err)
     }
 }
 
 
-exports.sigin_admin = async (req, res) =>{
+
+exports.sigin_client = async (req, res) =>{
     try{
        const data = req.body
-       const {result, error} = await signInAdmin(data)
+       const {result, error} = await signInClient(data)
        if(error){
             console.log(error)
             createErrorNotification(req, res, error.message)
@@ -41,7 +39,7 @@ exports.sigin_admin = async (req, res) =>{
                         if(err){
                             console.log(err)
                         }
-                        res.redirect('/administration');
+                        res.redirect('/home');
                     })
                 } else {
                     createErrorNotification(req, res, 'Incorrect login details' )
@@ -56,8 +54,6 @@ exports.sigin_admin = async (req, res) =>{
 }
 
 
-
-exports.logout = function(req, res) {
-    exec(req.logout()).then(res.redirect('/auth-login'))  
+exports.client_logout = function(req, res) {
+    exec(req.logout()).then(res.redirect('/login'))  
 }
-

@@ -12,9 +12,24 @@
     <title>Login | BGA Data Template</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="../assets/css/dashlite.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body class="nk-body bg-white npc-general pg-auth">
+    <span>
+        <% if(messages){ %> 
+          <% if(messages.error != '' && messages.error != undefined && messages.error != null){ %>
+            <p style="background: #a00202; padding: 10px; color: #fff;"
+            class="alert-text text-prompt-pop text-error text-bg animate__animated animate__bounceInRight" id="flash"><em class="icon ni ni-cross-circle-fill"></em><%= messages.error %></p>
+          <% } %> 
+          <% if(messages.success != '' && messages.success != undefined && messages.success != null){ %>
+            <p style="background: #02a002; padding: 10px; color: #fff;"
+            class="alert-text text-prompt-pop text-success text-bg animate__animated animate__bounceInRight" id="flash"><em class="icon ni ni-check-circle-fill"></em><%= messages.success %></p>
+          <% } %>             
+        <% } %>
+     </span>
     <div class="nk-app-root">
         <!-- main @s -->
         <div class="nk-main ">
@@ -39,32 +54,31 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form action="html/index.html">
+                                <form action="/login" method="post" enctype="application/x-www-form-urlencoded">
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="default-01">Email or Username</label>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <input type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address or username">
+                                            <input type="text" class="form-control form-control-lg" id="default-01" name="username" placeholder="Enter your email address or username">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="password">Password</label>
-                                            <a class="link link-primary link-sm" href="forgotpassword.html">Forgot Code?</a>
+                                            <a class="link link-primary link-sm" href="#">Forgot Code?</a>
                                         </div>
                                         <div class="form-control-wrap">
                                             <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </a>
-                                            <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your passcode">
+                                            <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Enter your passcode">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <a class="btn btn-lg btn-primary btn-block" href="databoxpreview.html">
-                                            Sign In
-                                        </a>
+                                        <input type="submit" class="btn btn-lg btn-primary btn-block">
+                                       
                                     </div>
                                 </form>
                               
@@ -139,5 +153,12 @@
     <script src="./assets/js/bundle.js?ver=3.0.3"></script>
     <script src="./assets/js/scripts.js?ver=3.0.3"></script>
    
-
+    <script type="text/javascript">
+        $(document).ready(function(){
+          setTimeout(function(){
+            $('#flash').remove();
+          }, 5000);
+         })
+    </script>
+       
 </html>

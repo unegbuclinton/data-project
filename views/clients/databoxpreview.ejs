@@ -5,7 +5,11 @@
                     <div class="nk-content-inner">
                         <div class="nk-content-body">
                             <div class="nk-block iframe-padding">
-                                <iframe class="iframe" src="https://reports.biggorilla.tech/datawall/1868aba7d5d1107a78d923b3cf28194f0624311ca/"></iframe>
+                                <% if(data){ %>
+                                    <iframe class="iframe" src="<%= data %>"></iframe>
+                                <%} else { %>
+                                   <h3> Sorry No Data To display</h3>
+                               <%}%>
                             </div><!-- .nk-block -->
                         </div>
                     </div>

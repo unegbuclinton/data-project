@@ -9,7 +9,7 @@
                                     <div class="nk-block-head-content">
                                         <h3 class="nk-block-title page-title">All Clients</h3>
                                         <div class="nk-block-des text-soft">
-                                            <p>You have total 2,595 users.</p>
+                                            <p>You have a total <%=clients.length %> users.</p>
                                         </div>
                                     </div><!-- .nk-block-head-content -->
                                     <div class="nk-block-head-content">
@@ -106,181 +106,76 @@
                                                         <span class="sub-text">Actions</span>
                                                     </div>
                                                 </div><!-- .nk-tb-item -->
-                                                <div class="nk-tb-item">
-                                                    <div class="nk-tb-col nk-tb-col-check">
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input" id="uid1">
-                                                            <label class="custom-control-label" for="uid1"></label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-tb-col">
-                                                        <a href="html/user-details-regular.html">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar bg-primary">
-                                                                    <span class="text-white">AB</span>
-                                                                </div>
-                                                                <div class="user-info">
-                                                                    <span class="tb-lead">Abu Bin Ishtiyak <span class="dot dot-success d-md-none ms-1"></span></span>
-                                                                    <span>info@cair.com</span>
+                                                <% if (clients.length > 0){ %>
+                                                    <% clients.forEach((client, index)=>{%>
+                                                        <div class="nk-tb-item">
+                                                            <div class="nk-tb-col nk-tb-col-check">
+                                                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                                    <input type="checkbox" class="custom-control-input" id="uid1">
+                                                                    <label class="custom-control-label" for="uid1"></label>
                                                                 </div>
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="nk-tb-col tb-col-mb">
-                                                        <span>CAIR San-Diego Valley</span>
-                                                    </div>
-                                                    <div class="nk-tb-col tb-col-md">
-                                                        <span>+811 847-4958</span>
-                                                    </div>
-                                                   
-                                                    <div class="nk-tb-col tb-col-lg">
-                                                        <span>10 Feb 2020</span>
-                                                    </div>
-                                                    <div class="nk-tb-col tb-col-md">
-                                                        <span class="tb-status text-success">Active</span>
-                                                    </div>
-                                                    <div class="nk-tb-col nk-tb-col-tools">
-                                                        <ul class="nk-tb-actions gx-1">
-                            
-                                                            <li>
-                                                                <div class="drodown">
-                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <ul class="link-list-opt no-bdr">
-                                            
-                                                                            <li><a href="clientsingle.html"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
-                                                                          
-                                                                            <li class="divider"></li>
-
-                                                                            <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
-
-                                                                            <li class="divider"></li>
-
-                                                                            <li><a href="#"><em class="icon ni ni-trash"></em><span>Delete Client</span></a></li>
-                                                                        </ul>
+                                                            <div class="nk-tb-col">
+                                                                <a href="html/user-details-regular.html">
+                                                                    <div class="user-card">
+                                                                        <div class="user-avatar bg-primary">
+                                                                            <span class="text-white"><%=client.fullNames?.firstname?.slice(0, 1).toUpperCase()%><%=client.fullNames?.lastname?.slice(0, 1).toUpperCase()%></span>
+                                                                        </div>
+                                                                        <div class="user-info">
+                                                                            <span class="tb-lead"><%= client.fullNames?.firstname %> <%= client.fullNames?.lastname %><span class="dot dot-success d-md-none ms-1"></span></span>
+                                                                            <span><%= client.username %></span>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div><!-- .nk-tb-item -->
-                                                <div class="nk-tb-item">
-                                                    <div class="nk-tb-col nk-tb-col-check">
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input" id="uid1">
-                                                            <label class="custom-control-label" for="uid1"></label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-tb-col">
-                                                        <a href="html/user-details-regular.html">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar bg-primary">
-                                                                    <span class="text-white">DK</span>
-                                                                </div>
-                                                                <div class="user-info">
-                                                                    <span class="tb-lead">Dipak Kareem <span class="dot dot-success d-md-none ms-1"></span></span>
-                                                                    <span>info@obathelpers.com</span>
-                                                                </div>
+                                                                </a>
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="nk-tb-col tb-col-mb">
-                                                        <span>OBAT Helpers</span>
-                                                    </div>
-                                                    <div class="nk-tb-col tb-col-md">
-                                                        <span>+811 847-4958</span>
-                                                    </div>
-                                                   
-                                                    <div class="nk-tb-col tb-col-lg">
-                                                        <span>10 Feb 2020</span>
-                                                    </div>
-                                                    <div class="nk-tb-col tb-col-md">
-                                                        <span class="tb-status text-success">Active</span>
-                                                    </div>
-                                                    <div class="nk-tb-col nk-tb-col-tools">
-                                                        <ul class="nk-tb-actions gx-1">
-                            
-                                                            <li>
-                                                                <div class="drodown">
-                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <ul class="link-list-opt no-bdr">
-                                            
-                                                                            <li><a href="clientsingle.html"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
-                                                                          
-                                                                            <li class="divider"></li>
-
-                                                                            <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
-
-                                                                            <li class="divider"></li>
-
-                                                                            <li><a href="#"><em class="icon ni ni-trash"></em><span>Delete Client</span></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div><!-- .nk-tb-item -->
-                                                <div class="nk-tb-item">
-                                                    <div class="nk-tb-col nk-tb-col-check">
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input" id="uid1">
-                                                            <label class="custom-control-label" for="uid1"></label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nk-tb-col">
-                                                        <a href="html/user-details-regular.html">
-                                                            <div class="user-card">
-                                                                <div class="user-avatar bg-primary">
-                                                                    <span class="text-white">SR</span>
-                                                                </div>
-                                                                <div class="user-info">
-                                                                    <span class="tb-lead">Syrah Ramzan <span class="dot dot-success d-md-none ms-1"></span></span>
-                                                                    <span>info@irusa.org</span>
-                                                                </div>
+                                                            <div class="nk-tb-col tb-col-mb">
+                                                                <span><%= client.organization.name %></span>
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="nk-tb-col tb-col-mb">
-                                                        <span>IRUSA</span>
-                                                    </div>
-                                                    <div class="nk-tb-col tb-col-md">
-                                                        <span>+811 847-4958</span>
-                                                    </div>
-                                                   
-                                                    <div class="nk-tb-col tb-col-lg">
-                                                        <span>10 Feb 2020</span>
-                                                    </div>
-                                                    <div class="nk-tb-col tb-col-md">
-                                                        <span class="tb-status text-success">Active</span>
-                                                    </div>
-                                                    <div class="nk-tb-col nk-tb-col-tools">
-                                                        <ul class="nk-tb-actions gx-1">
-                            
-                                                            <li>
-                                                                <div class="drodown">
-                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <ul class="link-list-opt no-bdr">
-                                            
-                                                                            <li><a href="clientsingle.html"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
-                                                                          
-                                                                            <li class="divider"></li>
-
-                                                                            <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
-
-                                                                            <li class="divider"></li>
-
-                                                                            <li><a href="#"><em class="icon ni ni-trash"></em><span>Delete Client</span></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div><!-- .nk-tb-item -->
-                                                
+                                                            <div class="nk-tb-col tb-col-md">
+                                                                <span><%= client.phone %></span>
+                                                            </div>
+                                                           
+                                                            <div class="nk-tb-col tb-col-lg">
+                                                                <% let datelogin = new Date(client.lastLogin) %>
+                                                                <% let a = datelogin.toDateString() %>
+                                                                <% let c = datelogin.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"); %>
+                                                                <span> <%= a%> <%= c%> </span>
+                                                            </div>
+                                                            <div class="nk-tb-col tb-col-md">
+                                                                <% if(client.isActive){%>
+                                                                    <span class="tb-status text-success capitalize"> Active </span>
+                                                                <%} else{ %>
+                                                                    <span class="tb-status text-warning capitalize"> Suspended </span>
+                                                               <% } %>
+                                                               
+                                                            </div>
+                                                            <div class="nk-tb-col nk-tb-col-tools">
+                                                                <ul class="nk-tb-actions gx-1">
+                                    
+                                                                    <li>
+                                                                        <div class="drodown">
+                                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                                <ul class="link-list-opt no-bdr">
+                                                    
+                                                                                    <li><a href="/view-client/<%= client._id %>"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
+                                                                                  
+                                                                                    <li class="divider"></li>
+        
+                                                                                    <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
+        
+                                                                                    <li class="divider"></li>
+        
+                                                                                    <li><a href="/delete-client/<%= client._id %>"><em class="icon ni ni-trash"></em><span>Delete Client</span></a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div><!-- .nk-tb-item -->
+                                                    <%})%>
+                                                <% } %>         
                                             </div><!-- .nk-tb-list -->
                                         </div><!-- .card-inner -->
                                         <div class="card-inner">

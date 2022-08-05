@@ -50,6 +50,11 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    // temp field
+    dataBox: {
+        type: String,
+        default: null,
+    }
 },{timestamps: true});
 
 userSchema.plugin(uniqueValidator);

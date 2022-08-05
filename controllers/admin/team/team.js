@@ -1,17 +1,14 @@
 const createErrorNotification = require("../../../middlewares/toast/error")
 const createSuccessNotification = require("../../../middlewares/toast/success")
-const { createTeamService } = require("../../../services/team")
+const { createTeamService, getAllTeam } = require("../../../services/team")
 
 
 // Display Create Admin Page
 exports.display_create_team = async (req, res) => {
     
     try{
-       if(req.isAuthenticated()){
-            res.render('admin/createadmin')
-       }else{
-            res.redirect('/login')
-       }
+        res.render('admin/createadmin')
+       
     } catch(err){
         createErrorNotification(req, res, err.message)
     }
@@ -38,7 +35,14 @@ exports.create_team = async (req, res) => {
 
 exports.display_all_team = async (req, res) => {
     try{
-        res.render('admin/team')
+       const {result, error} = await getAllTeam()
+       if(error){
+            createErrorNotification(req, res, error.message)
+       }else{
+            res.render('admin/team',{
+                team: result
+            })
+       }
     }catch(err){
         createErrorNotification(req, res, err.message)
     }

@@ -29,21 +29,21 @@
                                                     <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
                                                         <div class="data-col">
                                                             <span class="data-label">Full Name</span>
-                                                            <span class="data-value">Abu Bin Ishtiyak</span>
+                                                            <span class="data-value"><%=clients.fullNames?.firstname %> <%=clients.fullNames?.lastname %></span>
                                                         </div>
                                                         <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
                                                     </div><!-- data-item -->
                                                     <div class="data-item">
                                                         <div class="data-col">
                                                             <span class="data-label">Email</span>
-                                                            <span class="data-value">info@softnio.com</span>
+                                                            <span class="data-value"><%= clients.username %></span>
                                                         </div>
                                                         <div class="data-col data-col-end"><span class="data-more disable"><em class="icon ni ni-lock-alt"></em></span></div>
                                                     </div><!-- data-item -->
                                                     <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
                                                         <div class="data-col">
                                                             <span class="data-label">Phone Number</span>
-                                                            <span class="data-value text-soft">Not add yet</span>
+                                                            <span class="data-value text-soft"><%= clients.phone %></span>
                                                         </div>
                                                         <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
                                                     </div><!-- data-item -->
@@ -57,14 +57,14 @@
                                                     <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
                                                         <div class="data-col">
                                                             <span class="data-label">Name</span>
-                                                            <span class="data-value">IRUSA</span>
+                                                            <span class="data-value"><%= clients.organization?.name %></span>
                                                         </div>
                                                         <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
                                                     </div><!-- data-item -->
                                                     <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
                                                         <div class="data-col">
                                                             <span class="data-label">Website</span>
-                                                            <span class="data-value">https://irusa.org</span>
+                                                            <span class="data-value"><%= clients.organization?.website %></span>
                                                         </div>
                                                         <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-edit"></em></span></div>
                                                     </div><!-- data-item -->
@@ -82,11 +82,11 @@
                                                 <div class="card-inner">
                                                     <div class="user-card">
                                                         <div class="user-avatar bg-primary">
-                                                            <span class="text-white">AB</span>
+                                                            <span class="text-white"><%=clients.fullNames?.firstname?.slice(0, 1).toUpperCase()%><%=clients.fullNames?.lastname?.slice(0, 1).toUpperCase()%></span>
                                                         </div>
                                                         <div class="user-info">
-                                                            <span class="lead-text">Abu Bin Ishtiyak</span>
-                                                            <span class="sub-text">info@irusa.org</span>
+                                                            <span class="lead-text"><%=clients.fullNames?.firstname %> <%=clients.fullNames?.lastname %></span>
+                                                            <span class="sub-text"><%= clients.username %></span>
                                                         </div>
                                                        
                                                     </div><!-- .user-card -->
@@ -94,9 +94,9 @@
                                                
                                                 <div class="card-inner p-0">
                                                     <ul class="link-list-menu">
-                                                        <li><a class="active" href="clientsingle.html"><em class="icon ni ni-user-fill-c"></em><span>Account Infomation</span></a></li>
+                                                        <li><a class="active" href="/view-client/<%=clients._id%>"><em class="icon ni ni-user-fill-c"></em><span>Account Infomation</span></a></li>
                             
-                                                        <li><a href="databoxsettings.html"><em class="icon ni ni-chart-up"></em><span>Databox </span></a></li>
+                                                        <li><a href="/view-databox/<%=clients._id%>"><em class="icon ni ni-chart-up"></em><span>Databox </span></a></li>
 
                                                         <li><a href="datastudiosettings.html"><em class="icon ni ni-chart-up"></em></em><span>Datastudio</span></a></li>
 

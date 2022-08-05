@@ -105,8 +105,18 @@
                                                 <em class="icon ni ni-user-alt"></em>
                                             </div>
                                             <div class="user-info d-none d-xl-block">
-                                                <div class="user-status">User</div>
-                                                <div class="user-name dropdown-indicator">Abu Nazer</div>
+                                                <% if (user) { %>
+                                                    <% if (user.role != null) { %>
+                                                        <div class="user-status"><%= user.role %></div>
+                                                    <%} else{ %>
+                                                        <div class="user-status">Hello</div>
+                                                    <% } %>
+                                                    <div class="user-name dropdown-indicator">
+                                                        <%=user.fullNames?.firstname%> <%=user.fullNames?.lastname%>
+                                                    </div>
+                                                <%} else {%>
+                                                    <div class="user-status">Unauthorized</div>
+                                                <%} %>
                                             </div>
                                         </div>
                                     </a>
@@ -114,11 +124,11 @@
                                         <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                                             <div class="user-card">
                                                 <div class="user-avatar">
-                                                    <span>AN</span>
+                                                    <span><%=user.fullNames?.firstname.slice(0, 1).toUpperCase()%><%=user.fullNames?.lastname.slice(0, 1).toUpperCase()%></span>
                                                 </div>
                                                 <div class="user-info">
-                                                    <span class="lead-text">Abu Nazer</span>
-                                                    <span class="sub-text">Abunazer@obathelpers.org</span>
+                                                    <span class="lead-text"><%=user.fullNames?.firstname%> <%=user.fullNames?.lastname%></span>
+                                                    <span class="sub-text"><%=user.username%></span>
                                                 </div>
                                                 
                                             </div>
@@ -134,7 +144,7 @@
                                         </div>
                                         <div class="dropdown-inner">
                                             <ul class="link-list">
-                                                <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                                <li><a href="/client-logout"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -145,4 +155,16 @@
                     </div><!-- .nk-header-wrap -->
                 </div><!-- .container-fliud -->
             </div>
+            <span>
+                <% if(messages){ %> 
+                  <% if(messages.error != '' && messages.error != undefined && messages.error != null){ %>
+                    <p style="background: #a00202; padding: 10px; color: #fff;"
+                    class="alert-text text-prompt-pop text-error text-bg animate__animated animate__bounceInRight" id="flash"><em class="icon ni ni-cross-circle-fill"></em><%= messages.error %></p>
+                  <% } %> 
+                  <% if(messages.success != '' && messages.success != undefined && messages.success != null){ %>
+                    <p style="background: #02a002; padding: 10px; color: #fff;"
+                    class="alert-text text-prompt-pop text-success text-bg animate__animated animate__bounceInRight" id="flash"><em class="icon ni ni-check-circle-fill"></em><%= messages.success %></p>
+                  <% } %>             
+                <% } %>
+             </span>
             <!-- main header @e -->

@@ -33,4 +33,65 @@ async function createClientService(data){
 
 }
 
-module.exports = {createClientService}
+
+async function getAllClients(){
+    // will paginate later
+    const clients = await UserDao.getAllClients()
+    if(clients){
+        return {
+            result: clients,
+            error: null
+        }
+    }else{
+        return{
+            result: null,
+            error:{
+                message: "Failed To fetch Client",
+                type: "ERROR_FETCHING_FROM_DB"
+            } 
+        }
+    
+    }
+}
+
+async function deleteClient(id){
+    const result = await UserDao.deleteClient(id)
+
+    if(result){
+        return{
+            result: result,
+            error:null
+        }
+    }else{
+        return {
+            result: null,
+            error:{
+                message: "Failed Todelete Client",
+                type: "ERROR_DELETING_FROM_DB"
+            }
+        }
+    }
+}
+
+async function getSingleClient(id){
+    console.log(id)
+    const client = await UserDao.getSingleClient(id)
+
+    if(client){
+        return {
+            result: client,
+            error: null
+        }
+    }else{
+        return{
+            result: null,
+            error:{
+                message: "Failed To get single Client",
+                type: "ERROR_FETCHING_FROM_DB"
+            } 
+        }
+    }
+}
+
+
+module.exports = {createClientService, getAllClients, deleteClient, getSingleClient}

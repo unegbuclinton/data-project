@@ -32,4 +32,24 @@ async function createTeamService(data){
 
 }
 
-module.exports = {createTeamService}
+async function getAllTeam(){
+    // will paginate later
+    const team = await UserDao.getAllTeam()
+    if(team){
+        return {
+            result: team,
+            error: null
+        }
+    }else{
+        return{
+            result: null,
+            error:{
+                message: err.message,
+                type: "ERROR_FETCHING_FROM_DB"
+            } 
+        }
+    
+    }
+}
+
+module.exports = {createTeamService, getAllTeam}

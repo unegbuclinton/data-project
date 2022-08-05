@@ -41601,3 +41601,16 @@ margin-top: 20px;
 p#flash em{
   margin-right: 10px;
 }
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+input.submit-box {
+  background: #cc1531;
+  border: 0;
+  color: white;
+  padding: 10px 36px;
+  border-radius: 5px;
+  margin-top: 20px;
+}

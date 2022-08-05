@@ -8,7 +8,7 @@ const dataBoxSchema = new mongoose.Schema({
     url: String,
     client: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Client'
+        ref: 'User'
     },
 },{timestamps: true});
 

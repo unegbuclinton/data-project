@@ -90,7 +90,7 @@ exports.validateAdminSignin = async (req, res, next)=>{
             username: req.body.username.toLowerCase(),
             password: req.body.password,
         }
-
+        
         const { error, value } = schema.validate(data)
 
         if(error) {

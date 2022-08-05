@@ -50,6 +50,10 @@ class ExpressLoader{
         // Pass app to routes
         routes(app);
 
+        app.use(function (req, res) {
+            res.status(404).render('404');
+        }); 
+
         passport.use('local', new LocalStrategy(User.authenticate())); 
         passport.serializeUser(User.serializeUser()); 
         passport.deserializeUser(User.deserializeUser());
