@@ -63,6 +63,24 @@ exports.display_single_client = async (req, res) =>{
      }
 }
 
+exports.display_client_charity_navigator = async (req, res) =>{
+    try {
+        const {result, error} = await getSingleClient(req.params.clientId)
+        if(error){
+            createErrorNotification(req, res, error.message)
+       }else{
+            console.log(result)
+            res.render('admin/charitynavigator', {
+               clients: result
+            })
+       }
+    } catch (err) {
+        console.log(err)
+         createErrorNotification(req, res, err.message)
+    }
+}
+
+
 // delete Client
 exports.delete_client = async (req, res) => {
     try{

@@ -9,7 +9,7 @@ module.exports = function(app){
     const adminTeam = require('../controllers/admin/team/team')
     const adminDashboard = require('../controllers/admin/dashboard/dashboard')
     const adminDatabox = require('../controllers/admin/databox/databox')
-
+    const adminCharityNavigator = require('../controllers/admin/charitynavigator/charitynavigator')
 
     const clientAuth = require('../controllers/client/auth/auth')
     const clientDash = require('../controllers/client/dashboard/dashboard')
@@ -53,6 +53,11 @@ module.exports = function(app){
     app.route('/update-databox')
     .post(isAuthenticatedAdmin, adminDatabox.update_databox)
 
+    app.route('/charity-navigator/:clientId')
+    .get(isAuthenticatedAdmin, adminClient.display_client_charity_navigator)
+
+    app.route('/generate-navigator-id')
+    .post(isAuthenticatedAdmin,adminCharityNavigator.generate_navigator_id)
 
 
 
