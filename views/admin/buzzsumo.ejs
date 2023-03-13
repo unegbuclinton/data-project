@@ -1,0 +1,182 @@
+<%- include('partials/header') %> 
+            <!-- content @s -->
+            <div class="nk-content nk-content-fluid">
+                <div class="container-xl wide-xl">
+                    <div class="nk-content-inner">
+                        <div class="nk-content-body">
+                            <div class="nk-block">
+                                <div class="card card-bordered">
+                                    <div class="card-aside-wrap">
+                                        <div class="card-inner card-inner-lg">
+                                            <div class="nk-block-head nk-block-head-lg">
+                                                <div class="nk-block-between">
+                                                    <div class="nk-block-head-content">
+                                                        <h4 class="nk-block-title">Buzzsumo</h4>
+                                                        <div class="nk-block-des">
+                                                            <p>With BuzzSumo you can gather clear evidence to support your content strategy. </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-block-head-content align-self-start d-lg-none">
+                                                        <a href="#" class="toggle btn btn-icon btn-trigger mt-n1" data-target="userAside"><em class="icon ni ni-menu-alt-r"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div><!-- .nk-block-head -->
+                                            <div class="nk-block">
+                                                <div class="nk-data data-list">
+                                                    <div class="data-head">
+                                                        <h6 class="overline-title">Basic data about this organization</h6>
+                                                    </div>
+                                                    <div>
+                                                        <form action="" class="generator">
+                                                            <input type="text" id="charity-name-field" class="form-control charity-name" default value="<%= clients.organization?.name %>" >
+                                                            <input type="submit" id="generate-id" class="charity-submit" value="Generate Navigator ID">
+                                                        </form>
+                                                    </div>
+                                                    <div class="data-item dynamic-table">
+                                                        <div class="data-col">
+                                                            <span class="data-label">Charity Name</span>
+                                                            <span class="data-value"><%= clients.organization?.name %></span>
+                                                        </div>
+                                                    </div><!-- data-item -->
+                                                    <div class="data-item dynamic-table">
+                                                        <div class="data-col">
+                                                            <span class="data-label">Navigator ID</span>
+                                                            <span class="data-value text-danger">unset</span>
+                                                        </div>
+                                                    </div><!-- data-item -->
+                                                   
+                                                   
+                                                </div><!-- data-list -->
+                                              
+                                            </div><!-- .nk-block -->
+                                        </div>
+                                      
+                                        <%- include('partials/sidebar') %> 
+
+                                    </div><!-- .card-aside-wrap -->
+                                </div><!-- .card -->
+                            </div><!-- .nk-block -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content @e -->
+            <%- include('partials/footer') %> 
+        </div>
+        <!-- wrap @e -->
+    </div>
+    <!-- app-root @e -->
+   
+    <!-- @@ Profile Edit Modal @e -->
+    <div class="modal fade" role="dialog" id="profile-edit">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                <div class="modal-body modal-body-lg">
+                    <h5 class="title">Update Profile</h5>
+                    <ul class="nk-nav nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#personal">Personal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#address">Organization</a>
+                        </li>
+                    </ul><!-- .nav-tabs -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="personal">
+                            <div class="row gy-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="full-name">First Name</label>
+                                        <input type="text" class="form-control form-control-lg" id="full-name" value="Abu Bin Ishtiyak" placeholder="Enter First name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="display-name">Last Name</label>
+                                        <input type="text" class="form-control form-control-lg" id="display-name" value="Ishtiyak" placeholder="Enter Last name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="phone-no">Phone Number</label>
+                                        <input type="text" class="form-control form-control-lg" id="phone-no" value="+880" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                               
+
+                                <div class="col-12">
+                                    <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                        <li>
+                                            <a href="#" data-bs-dismiss="modal" class="btn btn-lg btn-primary">Update Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- .tab-pane -->
+                        <div class="tab-pane" id="address">
+                            <div class="row gy-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="address-l1">Organization Name</label>
+                                        <input type="text" class="form-control form-control-lg" id="address-l1" value="2337 Kildeer Drive">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="address-l2">Organization Website</label>
+                                        <input type="text" class="form-control form-control-lg" id="address-l2" value="">
+                                    </div>
+                                </div>
+                            
+                                <div class="col-12">
+                                    <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                        <li>
+                                            <a href="#" class="btn btn-lg btn-primary">Update Organization</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- .tab-pane -->
+                    </div><!-- .tab-content -->
+                </div><!-- .modal-body -->
+            </div><!-- .modal-content -->
+        </div><!-- .modal-dialog -->
+    </div><!-- .modal -->
+    <!-- JavaScript -->
+    <script src="../assets/js/bundle.js?ver=3.0.3"></script>
+    <script src="../assets/js/scripts.js?ver=3.0.3"></script>
+    <script src="../assets/js/charts/gd-default.js?ver=3.0.3"></script>
+
+    <script>
+        const generateButton = document.getElementById('generate-id')
+        const charityName = document.getElementById('charity-name-field')
+
+        generateButton.addEventListener('click',  async function generateId(e){
+            e.preventDefault()
+            if(charityName){
+                const data = {
+                    charityName: charityName.value
+                }
+
+                const charityId = await fetchNavigatorId(data)
+                console.log(charityId)
+            }
+        })
+
+       
+        async function fetchNavigatorId(data){
+            let response = await fetch('/generate-navigator-id', {method: 'POST', headers :{'Content-Type': 'application/json'}, body: JSON.stringify(data)})
+            return response.json()
+        }
+
+    </script>
+</body>
+
+</html>
